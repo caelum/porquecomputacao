@@ -1,0 +1,186 @@
+body{font-family:Arial, Verdana, Sans-serif; margin:0px; padding:0px;}
+
+.ajust01{margin-bottom:15px;}
+
+#headerContent{ background: url('images/bgHeader.png') no-repeat top left; padding-top:440px; padding-bottom:25px;}
+
+#textHeader h1{font-size:32px; font-weight:bold; color:#000; margin:0px; padding:0px;}
+#textHeader p{margin:0px 0px; font-size:14px; color:#4D4D4D;}
+#textHeader p a{text-decoration:none; color:#005596;}
+
+/* content for posts */
+#footer{
+	
+}
+
+.cntBox{
+	background:#DEEDF9 url('images/bgComment.gif') left bottom no-repeat;
+	text-align:center;
+	-moz-border-radius: 4px; /* Firefox */
+	-webkit-border-radius: 4px; /* Safari and Chrome */
+	border-radius: 4px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3*/}
+	
+.cntBox h2{
+	font-size:18px;
+	font-weight:bold;
+	color:#002D62;
+	text-align:left;
+	margin-left:10px;
+	border-bottom:2px solid #BDCEE7;}
+	
+.cntBox p {
+	font-size:11px;
+	line-height:14px;
+	margin:5px 10px;
+}
+
+.cntBox p.author {text-align:right; margin:0px 10px 10px 0px; font-weight:bold;}
+
+.orkutBar, .youtubeBar, .vimeoBar, .flickrBar{
+	background: url('images/spriteButtons.png') no-repeat;
+	height:62px;
+	width:285px;
+	display:block;
+	float:left;
+	margin:20px 50px 20px 90px;
+}
+
+.orkutBar span, .youtubeBar span, .vimeoBar span, .flickrBar span {
+	display:none;
+}
+
+.orkutBar{background-position:0 0;}
+.youtubeBar{background-position:-855px 0;}
+.vimeoBar{background-position:-285px 0;}
+.flickrBar{background-position:-570px 0;}
+
+.orkutBar:hover{background-position:0 -65px;}
+.youtubeBar:hover{background-position:-855px -65px;}
+.vimeoBar:hover{background-position:-285px -65px;}
+.flickrBar:hover{background-position:-570px -65px;}
+
+
+/* footer config*/
+
+#footer{
+	border-top:solid 2px #005696;
+	padding-top:15px;
+}
+#imeIcon{ text-decoration:none; display:block; float:left; }
+#imeIcon img{border:none;}
+
+#caelumIcon {text-decoration:none; display:block; float:right;}
+#caelumIcon img{border:none;}
+
+/* contact form*/
+#contactboxMode a {
+	background:url('images/bgAgendar.png') no-repeat 0 0; 
+	height:92px;
+	text-decoration:none;
+	margin:0px;
+	padding:0px;
+	display:block;}
+
+	#contactboxMode a:hover{background:url('images/bgAgendar.png') 0 -93px no-repeat;}
+
+#contactboxMode a p{
+	color:#fff;
+	width:150px;
+	display:block;
+	padding: 20px 0px 0px 30px;}
+
+#contactbox{
+	width:450px; 
+	height:290px; 
+	background-color:#fff;
+	border:1px solid #dcdcdc; 
+	position:absolute; 
+	left:50%;
+	top:50%;
+	margin-left:-250px;
+	margin-top:-150px;
+	display:block;
+	-moz-box-shadow: 0px 4px 5px #4d4d4d; /* Firefox */
+	-webkit-box-shadow: 0px 4px 5px #4d4d4d; /* Safari, Chrome */
+	box-shadow: 0px 4px 5px #4d4d4d; /* CSS3 */
+	
+	-moz-border-radius: 15px; /* Firefox */
+	-webkit-border-radius: 15px; /* Safari and Chrome */
+	border-radius: 15px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3*/}
+
+#contactbox h2{
+	display:block;
+	width:420px;
+	height:auto;
+	float:left;
+	font-size:21px;
+	margin:15px 0px 15px 20px;}
+	
+	#contactbox h2 #close{
+		float:right;
+		text-decoration:none;
+		color:red;}
+
+#contactbox form{
+	display:block; 
+	position:relative;
+	float:left; 
+	width:420px; 
+	height:auto; 
+	overflow:hidden;
+	margin-left:20px;}
+
+#contactbox form p{
+	diplaly:block; 
+	float:left; 
+	width:100%; 
+	height:auto;
+	margin:0px auto;
+	padding:5px 0px;}
+	
+#contactbox form p label{
+	font-weight:bold;
+	margin-left:10px;
+	float:left;
+	display:block;
+	width:100px;
+	height:auto;
+	margin:0px;
+	padding:0px;}
+
+#contactbox form p .textA, #contactbox form p .textF{
+	width:285px;
+	display:block;
+	float:left;
+	margin:0px;
+	padding:5px;}
+	
+#contactbox form p .textF{ height:auto; }
+
+#contactbox form p .textA{ height:80px;}
+
+#contactbox form p .btnC{
+	width:auto;
+	height:auto;
+	background:#002D62;
+	color:#fff;
+	border:none;
+	padding:10px;
+	float:right;
+	font-size:12px;
+	font-weight:bold;
+	margin-left:10px;
+	
+	-moz-border-radius: 2px; /* Firefox */
+	-webkit-border-radius: 2px; /* Safari and Chrome */
+	border-radius: 2px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3*/}
+
+#statusE{
+	color:red;
+	font-weight:bold;
+	font-size:11px;
+	display:block;
+	float:left;
+	padding:10px;
+	margin-top:2px;
+	border:solid 1px red;}
