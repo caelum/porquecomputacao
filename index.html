@@ -114,14 +114,14 @@
 
 	<div id="contactbox" style="display:none;">
 		<h2>Gostaria de agendar uma palestra?<a href="#" id="close">X</a></h2>
-		<form method="post" action="http://www.caelum.com.br/contato/enviar/">
-		  <input type="hidden" name="contato.sobre" value="[porquecomputacao] Agendamento de palestra ou curso">
+		<form method="post" action="envia.php">
+		  <input type="hidden" name="assunto" value="[porquecomputacao] Agendamento de palestra ou curso">
 			<p><label for="nomeC">Nome:</label> 
-			  <input class="textF required" name="contato.nome" type="text" id="nomeC"></p>
+			  <input class="textF required" name="nome" type="text" id="nomeC"></p>
 			<p><label for="emailC">Email:</label> 
-			  <input class="textF required email" name="contato.email" type="text" id="emailC"></p>
+			  <input class="textF required email" name="email" type="text" id="emailC"></p>
 			<p><label for="msgC">Mensagem:</label> 
-			  <textarea id="msgC" name="contato.mensagem" class="textA required"></textarea></p>
+			  <textarea id="msgC" name="mensagem" class="textA required"></textarea></p>
 			<p><span id="statusE">Campos obrigatórios!</span>
 				<input class="btnC" type="submit" name="enviar" value="ENVIAR" /><input class="btnC" type="reset" name="apagar" value="APAGAR" />
 			</p>
