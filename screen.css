@@ -1,5 +1,9 @@
 body{font-family:Arial, Verdana, Sans-serif; margin:0px; padding:0px;}
 
+label.error { display: none !important; }
+
+.error { border: 1px solid red; }
+
 .ajust01{margin-bottom:15px;}
 
 #headerContent{ background: url('images/bgHeader.png') no-repeat top left; padding-top:440px; padding-bottom:25px;}

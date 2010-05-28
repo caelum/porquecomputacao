@@ -9,22 +9,6 @@
 	
 	<link rel="stylesheet" href="screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="grid.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	
-	<script type="text/javascript">
-		$(document).ready(function() {
-	 		// toggles contact form mode  
-	  		$('#contactboxMode a').click(function() {
-	    		$('#contactbox').toggle(400);
-	    		return false;
-	  		});
-		  $('#close').click(function() {
-		    $('#contactbox').hide('fast');
-		    return false;
-		  });
-		});
-	</script>
-	
 </head>
 
 <body>
@@ -130,15 +114,43 @@
 
 	<div id="contactbox" style="display:none;">
 		<h2>Gostaria de agendar uma palestra?<a href="#" id="close">X</a></h2>
-		<form>
-			<p><label for="nomeC">Nome:</label> <input class="textF" type="text" id="nomeC"></p>
-			<p><label for="emailC">Email:</label> <input class="textF" type="text" id="emailC"></p>
-			<p><label for="msgC">Mensagem:</label> <textarea class="textA"></textarea></p>
+		<form method="post" action="http://www.caelum.com.br/contato/enviar/">
+		  <input type="hidden" name="contato.sobre" value="[porquecomputacao] Agendamento de palestra ou curso">
+			<p><label for="nomeC">Nome:</label> 
+			  <input class="textF required" name="contato.nome" type="text" id="nomeC"></p>
+			<p><label for="emailC">Email:</label> 
+			  <input class="textF required email" name="contato.email" type="text" id="emailC"></p>
+			<p><label for="msgC">Mensagem:</label> 
+			  <textarea id="msgC" name="contato.mensagem" class="textA required"></textarea></p>
 			<p><span id="statusE">Campos obrigatórios!</span>
 				<input class="btnC" type="submit" name="enviar" value="ENVIAR" /><input class="btnC" type="reset" name="apagar" value="APAGAR" />
 			</p>
 		</form>
 	</div><!-- conctact box-->
 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.form.js"></script> 
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	 		// toggles contact form mode  
+	    $('#contactboxMode a').click(function() {
+	      $('#contactbox').toggle(400);
+	    		return false;
+	  		});
+		  $('#close').click(function() {
+		    $('#contactbox').hide('fast');
+		    return false;
+		  });
+		  $('#contactbox form').validate({
+		    submitHandler: function() {
+		      $(this).ajaxSubmit(function(){
+    		    alert("Obrigado!");
+  		      $('#contactbox').hide('fast');
+		      });
+		    }
+		  });
+		});
+	</script>
 </body>
 </html>
