@@ -11,14 +11,14 @@
 	$mensagem   = $_POST['mensagem'];
 	$escondido  = $_POST["escondido"];
 	
-	$erro = false;
+	$erro = null;
 	// validação dos campos
 	// TODO validar inputs maliciosos?
 	if ( !empty($escondido) 
 	     || empty($nome) || empty($email) || empty($mensagem) 
 		 || !isValidEmail($email)
 		) {
-		$erro = true;
+		$erro = "validação de form";
 	} else {		
 		$body   = "Nome: $nome \r\n"
 			   	 ."Email: $email \r\n"
@@ -29,14 +29,14 @@
 		           "Reply-To: $nome <$email>\r\n";
 
 		if (!mail($email_to, "[porquecomputacao] " . time(), $body, $headers)) {
-			$erro = true;
+			$erro = "erro ao enviar email";
 		}
 	}
-	
-	if ($erro) {
-	    header("HTTP/1.1 400 Bad Request")
+	if ($erro != null) {
+	    header("HTTP/1.1 400 Bad Request");
+	    echo "<!--" + $erro + "-->";
 	} else {
-	    header("HTTP/1.1 200 OK")
+	    header("HTTP/1.1 200 OK");
 	}
 	/*** functions ***/
 	function isValidEmail($email){
