@@ -143,10 +143,20 @@
 		    return false;
 		  });
 		  $('#contactbox form').validate({
-		    submitHandler: function() {
-		      $(this).ajaxSubmit(function(){
-    		    alert("Obrigado!");
-  		      $('#contactbox').hide('fast');
+		    submitHandler: function(form) {
+		      var action = form.action;
+		      var params = $(form).formSerialize();
+		      console.log(action);
+		      $.ajax({
+		        url: action, 
+		        data: params,
+		        success: function() {
+		          alert("Obrigado!");
+      		    $('#contactbox').hide('fast');
+		        },
+		        error: function() {
+		          alert("Erro ao enviar contato!");
+		        }
 		      });
 		    }
 		  });
