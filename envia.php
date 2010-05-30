@@ -5,11 +5,11 @@
 	$email_to = "contato.sp@caelum.com.br";
 	
     // todos os campos possíveis
-	$nome       = $_POST["nome"];
-	$assunto    = $_POST["assunto"];
-	$email      = $_POST["email"];
-	$mensagem   = $_POST['mensagem'];
-	$escondido  = $_POST["escondido"];
+	$nome       = $_GET["nome"];
+	$assunto    = $_GET["assunto"];
+	$email      = $_GET["email"];
+	$mensagem   = $_GET['mensagem'];
+	$escondido  = $_GET["escondido"];
 	
 	$erro = null;
 	// validação dos campos
