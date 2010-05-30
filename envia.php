@@ -1,8 +1,6 @@
 <?php 		
-	/* Envio de e-mails do form de contato da Caelum */
-	
-	// e-mails e configurações das unidades
-	$email_to = "contato.sp@caelum.com.br";
+	/* Envio de e-mails do form de contato do PQ Comp */
+	$email_to = "contato@porquecomputacao.com.br";
 	
     // todos os campos possíveis
 	$nome       = $_GET["nome"];
